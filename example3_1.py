@@ -13,4 +13,7 @@ print d["database"]
 d["uid"] = "sa"
 print d["uid"]
 print d
-# adf
+
+# del可以删除单独元素，clear清空dictionary
+del d["uid"]
+print d
