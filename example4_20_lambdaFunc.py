@@ -49,3 +49,23 @@ if __name__ == "__main__":
     print info.__doc__
 """
 
+# split方法不带参数
+s = "this  is \na \ttest"
+print s
+print s.split()
+print " ".join(s.split())
+
+"""
+|\n转义字符，表示换行   \t转义字符，表示制表符
+
+|当split方法不带参数的时候，表示按照空白分割，所以三个空格、一个回车，和一个制表符都算空格，都被分割了
+"""
+
+"""
+processFunc = collapse and (lambda s: " ".join(s.split())) or (lambda s: s)
+
+|processFunc最终会是一个参数，具体是哪一个由collapse决定
+-|如果collapse为真，则为(lambda s: " ".join(s.split()))--返回压缩空白后的内容
+-|否则(lambda s: s)---返回未改变的参数
+"""
+

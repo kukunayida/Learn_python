@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # 映射list
 
-li = [1,9,8,4]
+li = ["1","22",(1,2),"four"]
 print [elem*2 for elem in li]
 print li
-li = [elem*2 for elem in li]
+# li = [elem*2 for elem in li]
 print li
-
+print [(type(elem),len(elem)) for elem in li]
 
 # ——————————————————————————————————————————————————————————映射list在 ["%s=%s" % (k, v) for k, v in params.items()] 解释
 """#3_25
