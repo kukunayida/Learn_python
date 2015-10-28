@@ -93,9 +93,48 @@ print """
 ———————————————————————————————————————#5_07类的实例化 instantiating class——————————————————————————————————————————————
 """
 
+"""
+在 Python 中对类进行实例化很直接。要对类进行实例化，只要调用类 (就好像它是一个函数)，传入定义在 __init__ 方法中的参数。返回值将是新创建的对象。
+"""
 import example5_1_fileinfo
 f = example5_1_fileinfo.FileInfo("C:/Users/Public/Music/Sample Music/sleep away.mp3")
 print f.__class__
 print type(f.__class__)
 print f.__doc__
 print f
+
+"""
+|每个类的实例都有一个内置的属性,__class__
+
+|在 Python 中，创建类的实例只要调用一个类，仿佛它是一个函数就行了。不 像 C++ 或 Java 有一个明确的 new 操作符。
+"""
+
+
+#——————————————————————————————————————————————————
+print """
+———————————————————————————————————————#5_08垃圾回收  尝试实现内存泄漏——————————————————————————————————————————————
+"""
+
+def leakmem():
+    g = example5_1_fileinfo.FileInfo('C:/Users/Public/Music/Sample Music/sleep away.mp3')
+    print g
+
+for i in range(2):
+    leakmem()
+
+"""
+|Python有自己的垃圾回收机制，因此不会出现内存泄漏(轻易)，有个叫“引用计数”
+"""
+
+#——————————————————————————————————————————————————
+print """
+———————————————————————————————————————#5_09封装类  UserDict——————————————————————————————————————————————
+"""
+
+"""
+class UserDict:
+    def __init__(self,divt=None):
+        self.data = {}
+        if dict is not None:self.update(dict)
+"""
+
