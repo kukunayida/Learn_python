@@ -102,6 +102,7 @@ import example5_1_fileinfo
 f = example5_1_fileinfo.FileInfo("C:/Users/Public/Music/Sample Music/sleep away.mp3")
 # g = example5_1_fileinfo.FileInfo("C:/Users/Public/Music/Sample Music/Kalimba.mp3")
 print f.__class__
+print f.__class__.__bases__
 # print g.__class__
 print type(f.__class__)
 print f.__doc__
@@ -110,13 +111,17 @@ print f
 """
 |f = example5_1_fileinfo.FileInfo("C:/Users/Public/Music/Sample Music/sleep away.mp3") ---这就是在创建一个FileInfo的实例
 
-|每个类的实例都有一个内置的 属性,__class__
+|每个类的实例都有一个内置的 属性,__class__，返回得到的就是那个实例类的对象
 
-|类下边有方法，用方法可以获取一个对象的属性，Python中可以直接通过类似__class__获取对象（类也是对象）的属性
+|类下边有方法，类似java之类可以使用方法获取一个对象的属性，python也行，不过Python中有些属性可以直接通过类似class.__class__获取对象（类也是对象）的属性
 
 |在 Python 中，创建类的实例只要调用一个类，仿佛它是一个函数就行了。不像 C++ 或 Java 有一个明确的 new 操作符。
 """
+"""
+补充：http://stackoverflow.com/questions/12575484/class-inheritance-in-python
+|类的实例没有__bases__属性，只有class有
 
+"""
 
 #——————————————————————————————————————————————————
 print """
