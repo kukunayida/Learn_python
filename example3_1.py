@@ -17,3 +17,10 @@ print d
 # del可以删除单独元素，clear清空dictionary
 del d["uid"]
 print d
+print "——————————1"
+print d.copy() #字典有copy方法
+print type(d.copy())
+print "——————————2"
+print d.clear()
+print type(d.clear())
+print d
