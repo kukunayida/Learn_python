@@ -223,7 +223,7 @@ def values(self): return self.data.values()
   如果不是：
   也就是说，执行copy方法的类是通过UserDict继承得到的一个实例，也就说self表示的是这个实例（UsefDict的子类，比如上边的FileInfo（UserDict））
   我们不清楚如何生成一个实例的拷贝（比如子类定义了其它的数据属性）
-  这时候，python自带的一个co py模块就可以用上啦~这个模块很好用，不过这里不做深究
+  这时候，python自带的一个copy模块就可以用上啦~这个模块很好用，不过这里不做深究
   反正这个模块的作用就是能对Python下的任何对象进行拷贝操作~.（copy.copy（）---第一个copy表示copy模块，然后第二个copy表示方法，括号内是参数）
 
 |别的就是类比真实字典的属性，返回字典内的值
